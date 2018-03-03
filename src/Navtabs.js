@@ -25,7 +25,7 @@ class Navtabs extends React.Component {
 					</div>
 					<div id="menu1" className="tab-pane fade">
 						<h3>Menu 1</h3>
-						<p>Some content in menu 1.</p>
+						<p>{props.status}</p>
 					</div>
 					<div id="menu2" className="tab-pane fade">
 						<h3>Menu 2</h3>

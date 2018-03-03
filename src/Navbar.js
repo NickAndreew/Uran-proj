@@ -7,7 +7,7 @@ class Navbar extends Component {
 		super(props);
 		this.state = {		
 		};
-		
+
 		this.loginFunction = this.loginFunction.bind(this);
 		this.logoutFunction = this.logoutFunction.bind(this);
 	}

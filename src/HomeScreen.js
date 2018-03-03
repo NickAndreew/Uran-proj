@@ -6,8 +6,19 @@ class HomeScreen extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-            response: ''
-		};
+            response: {}
+        };
+        
+        this.updateLoggedInState = this.updateLoggedInState.bind(this);
+        this.updateLoggedOutState = this.updateLoggedOutState.bind(this);
+
+    }
+
+    updateLoggedInState(response){
+        this.setState({response});
+    }
+    updateLoggedOutState(){
+        this.setState({response: "Logged Out"});
     }
     
     componentDidMount(){
@@ -42,8 +53,7 @@ class HomeScreen extends React.Component {
 		return (
 			<div>
                 <Navbar />
-                <Navtabs />
-                
+                <Navtabs status = {this.state.response}/>
             </div>
 		);
 	}
