@@ -7,18 +7,21 @@ class Navbar extends Component {
 		super(props);
 		this.state = {		
 		};
+		
 		this.loginFunction = this.loginFunction.bind(this);
+		this.logoutFunction = this.logoutFunction.bind(this);
 	}
 
 	loginFunction() {
 		window.FB.getLoginStatus(function(response) {
             console.log(response.status);
-            if(response.status=="not_authorized"){
-                console.log(response.status);
-            } else {
-                console.log(response.status);
-            }
         });
+	}
+
+	logoutFunction() {
+		window.FB.logout(function(response) {
+			console.log(response)
+		});
 	}
 
 
@@ -36,8 +39,10 @@ class Navbar extends Component {
 							<li><a href="#">Page 2</a></li>
 						</ul>
 						<ul className="nav navbar-nav navbar-right">
-							<li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-							<li><a href="#"><span className="glyphicon glyphicon-log-in" onClick={
+							<li><a href="#"><span className="glyphicon glyphicon-user" onClick = {
+								this.logoutFunction
+							}></span> Log Out</a></li>
+							<li><a href="#"><span className="glyphicon glyphicon-log-in" onClick = {
 								this.loginFunction
 							}></span> Login</a></li>
 						</ul>
