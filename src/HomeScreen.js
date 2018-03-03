@@ -12,7 +12,12 @@ class HomeScreen extends React.Component {
     
     componentDidMount(){
         window.FB.getLoginStatus(function(response) {
-            console.log(response.status);
+            if(response.status=="not_authorized"){
+                console.log(response.status);
+            } else {
+                console.log(response.status);
+            }
+
         });
     }
 
@@ -21,6 +26,7 @@ class HomeScreen extends React.Component {
 			<div>
                 <Navbar />
                 <Navtabs />
+                
             </div>
 		);
 	}
