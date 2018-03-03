@@ -2,6 +2,26 @@ import React, { Component } from 'react';
 
 
 class Navbar extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {		
+		};
+		this.loginFunction = this.loginFunction.bind(this);
+	}
+
+	loginFunction() {
+		window.FB.getLoginStatus(function(response) {
+            console.log(response.status);
+            if(response.status=="not_authorized"){
+                console.log(response.status);
+            } else {
+                console.log(response.status);
+            }
+        });
+	}
+
+
 	render() {
 		return (
 			<div className="NavBar">
@@ -17,7 +37,9 @@ class Navbar extends Component {
 						</ul>
 						<ul className="nav navbar-nav navbar-right">
 							<li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-							<li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+							<li><a href="#"><span className="glyphicon glyphicon-log-in" onClick={
+								this.loginFunction
+							}></span> Login</a></li>
 						</ul>
 					</div>
 				</nav>
