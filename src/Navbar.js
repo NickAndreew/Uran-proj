@@ -14,12 +14,14 @@ class Navbar extends Component {
 
 	loginFunction() {
 		window.FB.getLoginStatus(function(response) {
-            console.log(response.status);
+			console.log("function Log In Status Runs");
+			console.log(response.status);
         });
 	}
 
 	logoutFunction() {
 		window.FB.logout(function(response) {
+			console.log("function Log Out Runs");
 			console.log(response);
 		});
 	}
@@ -39,12 +41,8 @@ class Navbar extends Component {
 							<li><a>Page 2</a></li>
 						</ul>
 						<ul className="nav navbar-nav navbar-right">
-							<li><a><span className="glyphicon glyphicon-user" onClick = {
-								this.logoutFunction
-							}></span> Log Out</a></li>
-							<li><a><span className="glyphicon glyphicon-log-in" onClick = {
-								this.loginFunction
-							}></span> Login</a></li>
+							<li><a><span className="glyphicon glyphicon-user" onClick = { this.logoutFunction }></span> Log Out</a></li>
+							<li><a><span className="glyphicon glyphicon-log-in" onClick = {	this.loginFunction }></span> Login</a></li>
 						</ul>
 					</div>
 				</nav>
