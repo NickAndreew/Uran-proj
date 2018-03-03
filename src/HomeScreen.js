@@ -7,9 +7,7 @@ class HomeScreen extends React.Component {
 		super(props);
 		this.state = {
             response: ''
-        };
-        
-
+		};
     }
     
     componentDidMount(){
@@ -37,6 +35,10 @@ class HomeScreen extends React.Component {
 			js.src = "https://connect.facebook.net/en_US/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
+
+        window.FB.getLoginStatus(function(response) {
+            console.log(response);
+        });
     }
 
 	render() {
@@ -44,6 +46,7 @@ class HomeScreen extends React.Component {
 			<div>
                 <Navbar />
                 <Navtabs />
+                
             </div>
 		);
 	}
