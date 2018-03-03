@@ -36,9 +36,6 @@ class HomeScreen extends React.Component {
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 
-        // window.FB.getLoginStatus(function(response) {
-        //     console.log(response);
-        // });
     }
 
 	render() {
