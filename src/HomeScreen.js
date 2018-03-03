@@ -12,14 +12,14 @@ class HomeScreen extends React.Component {
     
     componentDidMount(){
         window.fbAsyncInit = function() {
-			FB.init({
+			window.FB.init({
 			appId      : '424041198008614',
 			cookie     : true,
 			xfbml      : true,
 			version    : 'v2.12'
 			});
 			
-			FB.AppEvents.logPageView();   
+			window.FB.AppEvents.logPageView();   
 		};
 		
 		(function(d, s, id){
