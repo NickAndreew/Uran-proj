@@ -20,17 +20,17 @@ class Navtabs extends React.Component {
 
 				<div className="tab-content">
 					<div id="home" className="tab-pane fade in active">
-					<h3>HOME</h3>
-					<div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
-				</div>
-				</div>
-				<div id="menu1" className="tab-pane fade">
-				<h3>Menu 1</h3>
-					<p>Some content in menu 1.</p>
-				</div>
+						<h3>HOME</h3>
+						<div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>			
+					</div>
+					<div id="menu1" className="tab-pane fade">
+						<h3>Menu 1</h3>
+						<p>Some content in menu 1.</p>
+					</div>
 					<div id="menu2" className="tab-pane fade">
-					<h3>Menu 2</h3>
-					<p>Some content in menu 2.</p>
+						<h3>Menu 2</h3>
+						<p>Some content in menu 2.</p>
+					</div>
 				</div>
 			</div>	
 		);
