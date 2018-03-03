@@ -12,8 +12,7 @@ class HomeScreen extends React.Component {
     
     componentDidMount(){
         window.FB.getLoginStatus(function(response) {
-            // statusChangeCallback(response);
-            console.log(response);
+            console.log(response.status);
         });
     }
 
